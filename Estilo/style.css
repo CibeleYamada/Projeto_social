@@ -40,9 +40,24 @@ iframe#tela {
     left: 22px;
     width: 267px;
     height: 471px;
-
 }
 
-section#redes-sociais {
-    
+section#redes-sociais{
+    text-align: right; /*deixa o texto, no caso os ícones alinhados à direita*/
+}
+
+section#redes-sociais img{
+    width: 50px; /*só alterando a largura, ele ajusta a altura automaticamente, porque se trata de uma imagem*/
+    margin: 10px; /*deixa uma distância de 10 px entre as imagens*/
+    border-radius: 50%; /*deixa as imagens arrendondadas*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.402); /*coloca uma pequena sombra na imagem*/    
+    box-sizing: border-box; /*faz com que a borda da imagem faça parte dela também; desse modo, ao passar com o mouse em cima do ícone, não movimenta apenas a borda, o que dá um efeito estranho.*/
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.745); /*"hover": o que acontece quando passao mouse em cima do elemento - nesse caso, aparece uma borda branca.*/
+    transform: translate(-3px, -3px); /*ao passar o mouse em cima do elemento, ele vai se movimentar 3px para cima e para esquerda*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.755); /*ao passar o mouse em cima do ícone, sua sombra vai aumentar um pouco, já que configuramos ela com 2px 2px e 5px, e vai ficar um pouco mais forte, já que sua transparência era de 0.402 e passou a ser de 0.755*/
+    transition: 0.3s, border 0.8s; /*deixa essa alteração ao passar o mouse não tão rápido, mas com uma diferença de 0,3segundo, e a borda aparece depois de 0.8 segundo*/
+
 }
