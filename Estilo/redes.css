@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px; /*remove a margin que é colocada automaticamente quando anexamos a imagem.*/
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px; /*esse webkit-scrollbar é a barra de rolagem. Nesse caso, queremos esconder a barra de rolagem da imagem que fica na telinha do celular.*/
+    height: 0px;
+}
+
+img {
+    width: 100vw; /*a largura dessa imagem tem que ser completa porque ela vai ser carregada na telinha da imagem do iphone (do iframe).*/
+}
+
+a {
+    display: block; /*para mostrar o link de acesso no fim da imagem.*/
+    background-color: darkred;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: red;
+}
